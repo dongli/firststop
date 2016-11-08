@@ -1,0 +1,22 @@
+<div class='panel panel-default sign-up-panel'>
+  <div class='panel-heading center'>
+    <h4><%= t('devise.registrations.title') %></h4>
+  </div>
+  <div class='panel-body'>
+    <%= simple_form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+      <%= f.error_notification %>
+
+      <div class='form-inputs'>
+        <%= f.input :email, require: true, autofocus: true %>
+        <%= f.input :password, required: true, hint: ('#{@minimum_password_length} characters minimum' if @minimum_password_length) %>
+        <%= f.input :password_confirmation, required: true %>
+      </div>
+
+      <div class='form-actions'>
+        <%= f.button :submit, t('action.sign_up'), class: 'btn btn-success btn-block' %>
+      </div>
+    <% end %>
+
+    <%= render 'devise/shared/links' %>
+  </div>
+</div>

@@ -1,0 +1,7 @@
+<% if content_for? :right_column %>
+<div class='col-md-9 col-sm-8' id='center-column'>
+<% else %>
+<div class='col-xs-12' id='center-column'>
+<% end %>
+  <%= yield :center_column %>
+</div>

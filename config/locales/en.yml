@@ -1,0 +1,14 @@
+en:
+  action:
+    sign_up: Sign Up
+    sign_in: Sign In
+    sign_out: Sign Out
+    send: Send
+    submit: Sumbit
+    next: Next
+  dashboard: Dashboard
+
+  navbar:
+    home: Home
+    profile: Profile
+    dashboard: Dashboard

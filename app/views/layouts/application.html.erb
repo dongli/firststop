@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Rollstar</title>
+    <%= csrf_meta_tags %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+
+  <body>
+
+    <%= render 'layouts/navbar' %>
+    <div id='main-container' class='container'>
+      <div id='main-columns'>
+        <%= render 'layouts/center_column' %>
+        <%= render 'layouts/right_column' %>
+        <%= yield if not content_for? :center_column %>
+      </div>
+    </div>
+
+
+  </body>
+</html>

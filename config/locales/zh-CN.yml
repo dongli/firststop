@@ -1,0 +1,9 @@
+zh-CN:
+  action:
+    sign_up: 注册
+    sign_in: 登陆
+    sign_out: 登出
+    send: 发送
+    submit: 提交
+    next: 继续
+  dashboard: 控制台

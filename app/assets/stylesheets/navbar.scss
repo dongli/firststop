@@ -1,0 +1,21 @@
+.navbar {
+  background-color: $dark-color;
+  border-color: $dark-color;
+  border-radius: 0;
+  margin-bottom: $spacing;
+  a {
+    color: $reversed-text-color !important;
+  }
+  .dropdown-menu {
+    background-color: $dark-color;
+    border: none;
+    margin-top: 3px !important;
+    border-top-right-radius: 4px !important;
+    border-top-left-radius: 4px !important;
+  }
+  .dropdown-menu > li > a:hover, .dropdown-menu > li > a:focus,
+  .dropdown.open .dropdown-toggle {
+    background-color: $dark-color !important;
+    opacity: 0.5;
+  }
+}
