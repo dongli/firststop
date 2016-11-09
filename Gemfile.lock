@@ -1,24 +1,3 @@
-PATH
-  remote: ../carload
-  specs:
-    carload (0.4.4)
-      bootstrap-sass (~> 3.3)
-      elasticsearch-model (~> 0.1)
-      elasticsearch-rails (~> 0.1)
-      font-awesome-rails (~> 4.6)
-      highline (~> 1.7)
-      jquery-rails (~> 4.2)
-      kaminari (~> 0.17)
-      pg_search (~> 1.0)
-      pundit (~> 1.1)
-      rails (~> 5.0.0, >= 5.0.0.1)
-      sass-rails (~> 5.0)
-      select2-rails (~> 4.0)
-      simple_form (~> 3.3)
-      turbolinks (~> 5)
-      uglifier (~> 3.0)
-      upload-image (~> 0.1)
-
 GEM
   remote: https://rubygems.org/
   specs:
@@ -68,6 +47,23 @@ GEM
       sass (>= 3.3.4)
     builder (3.2.2)
     byebug (9.0.6)
+    carload (0.4.5)
+      bootstrap-sass (~> 3.3)
+      elasticsearch-model (~> 0.1)
+      elasticsearch-rails (~> 0.1)
+      font-awesome-rails (~> 4.6)
+      highline (~> 1.7)
+      jquery-rails (~> 4.2)
+      kaminari (~> 0.17)
+      pg_search (~> 1.0)
+      pundit (~> 1.1)
+      rails (~> 5.0.0, >= 5.0.0.1)
+      sass-rails (~> 5.0)
+      select2-rails (~> 4.0)
+      simple_form (~> 3.3)
+      turbolinks (~> 5)
+      uglifier (~> 3.0)
+      upload-image (~> 0.1)
     carrierwave (0.11.2)
       activemodel (>= 3.2.0)
       activesupport (>= 3.2.0)
@@ -82,17 +78,17 @@ GEM
       railties (>= 4.1.0, < 5.1)
       responders
       warden (~> 1.2.3)
-    elasticsearch (2.0.0)
-      elasticsearch-api (= 2.0.0)
-      elasticsearch-transport (= 2.0.0)
-    elasticsearch-api (2.0.0)
+    elasticsearch (5.0.0)
+      elasticsearch-api (= 5.0.0)
+      elasticsearch-transport (= 5.0.0)
+    elasticsearch-api (5.0.0)
       multi_json
     elasticsearch-model (0.1.9)
       activesupport (> 3)
       elasticsearch (> 0.4)
       hashie
     elasticsearch-rails (0.1.9)
-    elasticsearch-transport (2.0.0)
+    elasticsearch-transport (5.0.0)
       faraday
       multi_json
     enumerize (2.0.0)
@@ -240,7 +236,7 @@ PLATFORMS
 
 DEPENDENCIES
   byebug
-  carload!
+  carload
   devise
   enumerize
   fontawesome-rails
@@ -249,6 +245,7 @@ DEPENDENCIES
   listen (~> 3.0.5)
   pg (~> 0.18)
   puma (~> 3.0)
+  pundit
   rails (~> 5.0.0, >= 5.0.0.1)
   sass-rails (~> 5.0)
   spring

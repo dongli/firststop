@@ -1,3 +1,11 @@
 .center {
   text-align: center;
 }
+
+ul.horizontal-clean-list {
+  -webkit-padding-start: 0;
+  li {
+    display: inline-block;
+    margin-right: $half-spacing;
+  }
+}

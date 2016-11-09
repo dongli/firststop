@@ -1,0 +1,17 @@
+<%= simple_form_for guide do |f| %>
+  <div class='form-inputes'>
+    <div class='row'>
+      <div class='col-md-8'>
+        <%= f.input :title %>
+      </div>
+      <div class='col-md-4'>
+        <%= f.input :toc %>
+      </div>
+    </div>
+    <%= f.input :content, as: :text %>
+  </div>
+
+  <div class='form-actions'>
+    <%= f.button :submit, t('action.submit'), class: 'btn btn-success' %>
+  </div>
+<% end %>

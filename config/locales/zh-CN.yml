@@ -7,3 +7,8 @@ zh-CN:
     submit: 提交
     next: 继续
   dashboard: 控制台
+
+  navbar:
+    home: 个人中心
+    profile: 个人资料
+    dashboard: 控制台

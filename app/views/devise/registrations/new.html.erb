@@ -8,6 +8,7 @@
 
       <div class='form-inputs'>
         <%= f.input :email, require: true, autofocus: true %>
+        <%= f.input :username, require: true %>
         <%= f.input :password, required: true, hint: ('#{@minimum_password_length} characters minimum' if @minimum_password_length) %>
         <%= f.input :password_confirmation, required: true %>
       </div>

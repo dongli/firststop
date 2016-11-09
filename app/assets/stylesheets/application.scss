@@ -1,6 +1,7 @@
 //= require font-awesome
 
 $spacing: 16px;
+$half-spacing: 8px;
 
 @import 'bootstrap-sprockets';
 @import 'bootstrap';
@@ -8,3 +9,4 @@ $spacing: 16px;
 @import 'common';
 @import 'navbar';
 @import 'devise';
+@import 'guides';

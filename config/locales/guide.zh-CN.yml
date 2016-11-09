@@ -1,0 +1,9 @@
+zh-CN:
+  activerecord:
+    models:
+      guide: 手册
+    attributes:
+      guide:
+        title: 题目
+        content: 内容
+        toc: 目录标示
