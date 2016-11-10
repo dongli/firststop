@@ -23,11 +23,11 @@ class Dashboard < Carload::Dashboard
     spec.index_page.shows.attributes = [:email, :role]
     spec.index_page.searches.attributes = [{:name=>:email, :term=>:cont}, {:name=>:role, :term=>:cont}]
   end
-  model :guide do |spec|
+  model :chapter do |spec|
     spec.default = false
     spec.attributes.permitted = [:title, :content, :toc, :user_id]
     spec.index_page.shows.attributes = [:title, :content, :toc, "user.username"]
     spec.index_page.searches.attributes = [{:name=>:title, :term=>:cont}, {:name=>:content, :term=>:cont}, {:name=>:toc, :term=>:cont}, {:name=>:user_id, :term=>:cont}]
   end
-  associate({:guide=>:user, :choose_by=>:username})
+  associate({:chapter=>:user, :choose_by=>:username})
 end

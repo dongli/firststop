@@ -1,9 +1,0 @@
-<h1><%= @guide.title %></h1>
-<ul class='horizontal-clean-list'>
-  <li><%= fa_icon('user', text: @guide.user.username) %></li>
-  <li><%= fa_icon('clock-o', text: @guide.created_at) %></li>
-  <% if policy(@guide).edit? %>
-    <li><%= link_to fa_icon('edit'), edit_guide_path(@guide) %></li>
-  <% end %>
-</ul>
-<div class='markdown-content'><%= @guide.content %></div>

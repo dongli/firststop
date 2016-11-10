@@ -1,4 +1,4 @@
-class GuidePolicy < ApplicationPolicy
+class ChapterPolicy < ApplicationPolicy
   def index?
     user
   end

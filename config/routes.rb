@@ -6,5 +6,5 @@ Rails.application.routes.draw do
   }
   mount Carload::Engine => '/carload'
   resources :users
-  resources :guides
+  resources :chapters
 end
