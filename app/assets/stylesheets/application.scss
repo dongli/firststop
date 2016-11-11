@@ -10,3 +10,16 @@ $half-spacing: 8px;
 @import 'navbar';
 @import 'devise';
 @import 'chapters';
+@import 'guides';
+
+#main-container {
+  margin-bottom: $spacing;
+}
+
+a {
+  color: $main-color;
+}
+a:hover {
+  color: $main-color;
+  text-decoration: none;
+}

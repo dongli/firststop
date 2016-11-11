@@ -1,0 +1,15 @@
+<h1 class='guide-title'><%= @guide.title %></h1>
+<ul class='horizontal-clean-list'>
+  <li><%= fa_icon('user', text: editors_tag(@guide)) %></li>
+  <li><%= fa_icon('clock-o', text: @guide.created_at) %></li>
+  <% if policy(@guide).edit? %>
+    <li><%= link_to fa_icon('edit'), edit_guide_path(@guide) %></li>
+  <% end %>
+</ul>
+<p class='guide-toc'>
+  <ul class='vertical-clean-list'>
+    <% @guide.chapters.each do |chapter| %>
+      <li><%= chapter.toc %> <%= link_to chapter.title, chapter %></li>
+    <% end %>
+  </ul>
+</p>

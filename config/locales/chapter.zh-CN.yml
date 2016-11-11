@@ -5,5 +5,8 @@ zh-CN:
     attributes:
       chapter:
         title: 题目
+        abstract: 摘要
         content: 内容
         toc: 目录标示
+        author:
+          username: 作者用户名

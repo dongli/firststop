@@ -1,4 +1,29 @@
+.edit_chapter {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
 #chapter_content {
   min-height: 600px;
   max-width: 100%;
+}
+
+.show-chapter {
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+h1.chapter-title {
+  font-size: 28px;
+  border-bottom: 1px solid #ddd;
+  padding-bottom: $half-spacing;
+}
+
+.markdown-content {
+  h1 {
+    font-size: 24px;
+    padding-bottom: $half-spacing;
+  }
 }

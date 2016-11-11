@@ -1,0 +1,11 @@
+<div class='panel panel-default guide-brief'>
+  <div class='panel-body'>
+    <%= link_to guide.title, guide %>
+    <div class='pull-right'>
+      <ul class='horizontal-clean-list'>
+        <li><%= editors_tag guide %></li>
+        <li><%= guide.created_at %></li>
+      </ul>
+    </div>
+  </div>
+</div>

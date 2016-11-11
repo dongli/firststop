@@ -17,7 +17,10 @@ class User < ApplicationRecord
   extend Enumerize
   enumerize :role, in: [:admin, :author, :guest], default: :guest, predicate: true
 
-  has_many :chapters
+  has_many :user_chapter_joins, dependent: :destroy
+  has_many :chapters, through: :user_chapter_joins
+  has_many :user_guide_joins, dependent: :destroy
+  has_many :guides, through: :user_guide_joins
 
   validates :email, :username, uniqueness: true
 end

@@ -10,19 +10,45 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20161108060057) do
+ActiveRecord::Schema.define(version: 20161110064734) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "chapters", force: :cascade do |t|
     t.string   "title"
+    t.string   "abstract"
     t.text     "content"
     t.string   "toc"
-    t.integer  "user_id"
+    t.integer  "guide_id"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["user_id"], name: "index_chapters_on_user_id", using: :btree
+    t.index ["guide_id"], name: "index_chapters_on_guide_id", using: :btree
+  end
+
+  create_table "guides", force: :cascade do |t|
+    t.string   "title"
+    t.string   "abstract"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
+
+  create_table "user_chapter_joins", force: :cascade do |t|
+    t.integer  "author_id"
+    t.integer  "chapter_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["author_id"], name: "index_user_chapter_joins_on_author_id", using: :btree
+    t.index ["chapter_id"], name: "index_user_chapter_joins_on_chapter_id", using: :btree
+  end
+
+  create_table "user_guide_joins", force: :cascade do |t|
+    t.integer  "editor_id"
+    t.integer  "guide_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["editor_id"], name: "index_user_guide_joins_on_editor_id", using: :btree
+    t.index ["guide_id"], name: "index_user_guide_joins_on_guide_id", using: :btree
   end
 
   create_table "users", force: :cascade do |t|

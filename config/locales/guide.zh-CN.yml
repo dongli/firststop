@@ -1,0 +1,10 @@
+zh-CN:
+  activerecord:
+    models:
+      guide: 手册
+    attributes:
+      guide:
+        title: 名称
+        abstract: 摘要
+        editor:
+          username: 编辑用户名

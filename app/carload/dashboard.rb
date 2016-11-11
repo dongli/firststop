@@ -19,15 +19,25 @@ class Dashboard < Carload::Dashboard
 
   model :user do |spec|
     spec.default = true
-    spec.attributes.permitted = [:email, :role]
-    spec.index_page.shows.attributes = [:email, :role]
-    spec.index_page.searches.attributes = [{:name=>:email, :term=>:cont}, {:name=>:role, :term=>:cont}]
+    spec.attributes.permitted = [:email, :username, :avatar, :role, {:chapter_ids=>[]}, {:guide_ids=>[]}]
+    spec.index_page.shows.attributes = [:email, :username, :role]
+    spec.index_page.searches.attributes = [{:name=>:email, :term=>:cont}, {:name=>:username, :term=>:cont}, {:name=>:avatar, :term=>:cont}, {:name=>:role, :term=>:cont}]
   end
+  associate({:user=>:chapter, :choose_by=>:title})
   model :chapter do |spec|
     spec.default = false
-    spec.attributes.permitted = [:title, :content, :toc, :user_id]
-    spec.index_page.shows.attributes = [:title, :content, :toc, "user.username"]
-    spec.index_page.searches.attributes = [{:name=>:title, :term=>:cont}, {:name=>:content, :term=>:cont}, {:name=>:toc, :term=>:cont}, {:name=>:user_id, :term=>:cont}]
+    spec.attributes.permitted = [:title, :abstract, :content, :toc, :guide_id, {:author_ids=>[]}]
+    spec.index_page.shows.attributes = [:title, :abstract, :content, :toc, [:pluck, :authors, :username], "guide.title"]
+    spec.index_page.searches.attributes = [{:name=>:title, :term=>:cont}, {:name=>:abstract, :term=>:cont}, {:name=>:content, :term=>:cont}, {:name=>:toc, :term=>:cont}, {:name=>:guide_id, :term=>:cont}]
   end
   associate({:chapter=>:user, :choose_by=>:username})
+  associate({:chapter=>:guide, :choose_by=>:title})
+  model :guide do |spec|
+    spec.default = false
+    spec.attributes.permitted = [:title, :abstract, {:chapter_ids=>[]}, {:editor_ids=>[]}]
+    spec.index_page.shows.attributes = [:title, :abstract, [:pluck, :editors, :username]]
+    spec.index_page.searches.attributes = [{:name=>:title, :term=>:cont}, {:name=>:abstract, :term=>:cont}]
+  end
+  associate({:guide=>:chapter, :choose_by=>:title})
+  associate({:guide=>:user, :choose_by=>:username})
 end

@@ -1,9 +1,11 @@
-<h1><%= @chapter.title %></h1>
-<ul class='horizontal-clean-list'>
-  <li><%= fa_icon('user', text: @chapter.user.username) %></li>
-  <li><%= fa_icon('clock-o', text: @chapter.created_at) %></li>
-  <% if policy(@chapter).edit? %>
-    <li><%= link_to fa_icon('edit'), edit_chapter_path(@chapter) %></li>
-  <% end %>
-</ul>
-<div class='markdown-content'><%= @chapter.content %></div>
+<div class='show-chapter'>
+  <h1 class='chapter-title'><%= @chapter.title %></h1>
+  <ul class='horizontal-clean-list'>
+    <li><%= fa_icon('user', text: authors_tag(@chapter)) %></li>
+    <li><%= fa_icon('clock-o', text: @chapter.created_at) %></li>
+    <% if policy(@chapter).edit? %>
+      <li><%= link_to fa_icon('edit'), edit_chapter_path(@chapter) %></li>
+    <% end %>
+  </ul>
+  <div class='markdown-content'><%= @chapter.content %></div>
+</div>

@@ -1,0 +1,7 @@
+<% content_for :center_column do %>
+  <div class='guide-showcase'>
+    <% Guide.latest.each do |guide| %>
+      <%= render 'guides/showcase_brief', guide: guide %>
+    <% end %>
+  </div>
+<% end %>
