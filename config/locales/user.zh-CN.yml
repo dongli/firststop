@@ -8,5 +8,6 @@ zh-CN:
         email: 邮箱
         username: 用户名
         login: 邮箱或用户名
+        avatar: 头像
         password: 密码
         password_confirmation: 确认密码

@@ -1,0 +1,8 @@
+<% content_for :right_column do %>
+  <div class='panel panel-default user-profile-panel'>
+    <div class='panel-body center'>
+      <p><%= image_tag @user.avatar.url(:medium), class: 'avatar' %></p>
+      <p><%= @user.username %></p>
+    </div>
+  </div>
+<% end %>

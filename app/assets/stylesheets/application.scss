@@ -1,4 +1,5 @@
 //= require font-awesome
+//= require upload-image
 
 $spacing: 16px;
 $half-spacing: 8px;
@@ -9,6 +10,7 @@ $half-spacing: 8px;
 @import 'common';
 @import 'navbar';
 @import 'devise';
+@import 'users';
 @import 'chapters';
 @import 'guides';
 

@@ -15,4 +15,5 @@
 //= require turbolinks
 //= require bootstrap-sprockets
 //= require remarkable/remarkable.min
+//= require upload-image
 //= require_tree .

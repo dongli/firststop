@@ -1,0 +1,17 @@
+<div class='panel panel-default user-edit-panel'>
+  <div class='panel-heading center'>
+    完善个人信息
+  </div>
+  <div class='panel-body'>
+    <%= simple_form_for @user do |f| %>
+      <div class='form-inputs'>
+        <div class='form-group'>
+          <%= upload_image form: f, image_name: :avatar, width: 150, height: 150 %>
+        </div>
+      </div>
+      <div class='form-actions'>
+        <%= f.button :submit, t('action.submit'), class: 'btn btn-success' %>
+      </div>
+    <% end %>
+  </div>
+</div>

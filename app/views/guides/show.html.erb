@@ -8,7 +8,7 @@
 </ul>
 <p class='guide-toc'>
   <ul class='vertical-clean-list'>
-    <% @guide.chapters.each do |chapter| %>
+    <% @guide.chapters.order(:toc).each do |chapter| %>
       <li><%= chapter.toc %> <%= link_to chapter.title, chapter %></li>
     <% end %>
   </ul>

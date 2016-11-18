@@ -12,7 +12,10 @@ class User < ApplicationRecord
     elsif conditions.has_key?(:username) || conditions.has_key?(:email)
       where(conditions.to_hash).first
     end
- end
+  end
+
+  mount_uploader :avatar, AvatarUploader
+  include Croppable
 
   extend Enumerize
   enumerize :role, in: [:admin, :author, :guest], default: :guest, predicate: true
