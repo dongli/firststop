@@ -7,7 +7,7 @@
         <span class='icon-bar'></span>
         <span class='icon-bar'></span>
       </button>
-      <%= link_to fa_icon('home'), root_path, class: 'navbar-brand' %>
+      <%= link_to t('firststop'), root_path, class: 'navbar-brand' %>
     </div>
     <div class='collapse navbar-collapse' id='navbar-items'>
       <ul class='nav navbar-nav navbar-right'>
@@ -15,7 +15,7 @@
           <li class='dropdown'>
             <a class='dropdown-toggle' data-toggle='dropdown' role='button'
               aria-haspopup='true' aria-expanded='false'>
-              <%= fa_icon('user') %>
+              <%= image_tag current_user.avatar.url(:small), class: 'avatar' %>
             </a>
             <ul class='dropdown-menu'>
               <li><%= link_to fa_icon('home', text: t('navbar.home')), current_user %></li>

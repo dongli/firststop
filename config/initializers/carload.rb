@@ -18,7 +18,7 @@ Carload.setup do |config|
   config.upload_solution = :carrierwave
 
   # Set which search engine to use (elasticsearch or pg_search).
-  config.search_engine = :elasticsearch
+  config.search_engine = :none
 
   # Set the actions used to discern user's permission to access dashboard.
   #
