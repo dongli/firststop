@@ -32,5 +32,5 @@ Carload.setup do |config|
   # The permission can also be array, the relation among them is OR.
   # By doing this, you have full control on the access permission.
   # TODO: Set the permissions for each data table.
-  config.dashboard.permits_user.all = 'role.admin?'
+  config.dashboard.permits_user.all = ['role.admin?', 'role.author?']
 end
